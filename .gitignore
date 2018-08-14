@@ -1,0 +1,11 @@
+# Folders
+build
+.nyc_output
+.vscode
+node_modules
+test
+
+# Files
+.DS_Store
+npm-debug.log
+.npmignore
