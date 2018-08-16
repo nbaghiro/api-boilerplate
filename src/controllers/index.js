@@ -31,7 +31,7 @@ export const useAction = (parser, validator, router, routes, route, befores, nam
       } catch (error) {
         let errors
         if (error.constructor === Array) errors = error
-        if (!errors && onError) errors = await onError(error, ctx)
+        if (!errors && onError) errors = await onError(error)
         if (!errors) errors = onValidationError(error)
         if (!errors) throw (error)
         else return Bluebird.reject({ status: 400, errors })
